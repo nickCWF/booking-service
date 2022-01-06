@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:elevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnDeleteBarber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnEditBarber"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="19dp"
+            android:text="Delete" />
+
+        <TextView
+            android:id="@+id/nametext"
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:text="This is Demo Name"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contactNumbertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nametext"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:text="This is contact number"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+
+        <TextView
+            android:id="@+id/emailtext"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactNumbertext"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:text="This is Email Name"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/salarytext"
+            android:layout_width="254dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/emailtext"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:text="This is Salary"
+            android:textColor="#000"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btnEditBarber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="258dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="19dp"
+            android:text="Edit" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".owner.editBarber">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/purple_500">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_person_24" />
+
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            >
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:text="Barber ID" />
+
+            <TextView
+                android:id="@+id/viewTextBarberID"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView14"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Barber ID"
+                android:inputType="textPersonName"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewTextBarberContactNumber"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:text="Salary" />
+
+            <TextView
+                android:id="@+id/viewTextBarberSalary"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView16"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Salary"
+                android:inputType="textPersonName"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewTextBarberID"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewTextBarberName"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewTextBarberEmail"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:text="Contact Number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/viewTextBarberName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:hint="Name"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/viewTextBarberEmail"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView7"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:hint="Email Address"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/viewTextBarberContactNumber"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView8"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:hint="Phone Number"
+                android:textSize="16dp" />
+
+            <ImageButton
+                android:id="@+id/btnImgEditSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="280dp"
+                android:layout_marginEnd="30dp"
+
+                android:layout_toEndOf="@+id/viewTextBarberSalary"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:background="@color/purple_500"/>
+
+
+        </RelativeLayout>
+
+
+
+
+</FrameLayout>

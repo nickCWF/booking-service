@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_Barber"
+            android:title="Manage Barber"/>
+        <item
+            android:id="@+id/menu_Service"
+            android:title="Manage Service"/>
+        <item
+            android:id="@+id/menu_Schedule"
+            android:title="Schedule"/>
+        <item
+            android:id="@+id/menu_Leave"
+            android:title="Manage Leave"/>
+        <item
+            android:id="@+id/menu_Report"
+            android:title="Report"/>
+        <item
+            android:id="@+id/menu_Logout"
+            android:title="Logout"/>
+    </group>
+
+</menu>

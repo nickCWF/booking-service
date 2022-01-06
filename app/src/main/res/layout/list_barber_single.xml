@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textViewBarberID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:text="Barber ID"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textViewBarberName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewBarberID"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:text="Barber Name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textViewbarberEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewBarberName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:text="Barber Email" />
+
+        <Button
+            android:id="@+id/btnEditBarber"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btnDeleteBarber"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/btnEditBarber"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textSize="12dp" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
