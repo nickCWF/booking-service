@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customer.bookingCalanderFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".booking_calendar">
+
+        <ImageButton
+            android:id="@+id/imgButtonPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageButton
+            android:id="@+id/imgButtonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+
+        <devs.mulham.horizontalcalendar.HorizontalCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgButtonNext"
+            app:selectorColor="@android:color/holo_red_dark"
+            app:textColorNormal="@color/purple_200"
+            app:textColorSelected="@color/purple_200" />
+
+        <TextView
+            android:id="@+id/calendarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendarView"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Select Time"
+            android:textSize="24dp"/>
+
+        <LinearLayout
+            android:id="@+id/timeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendarText"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            >
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numPickHour"
+                />
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numPickMin"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/listBarberServiceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeContainer"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="BarberService"
+            android:textSize="24dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

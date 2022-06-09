@@ -22,18 +22,17 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
 
 public class MangeServiceFragment extends Fragment implements View.OnClickListener {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -78,14 +77,25 @@ public class MangeServiceFragment extends Fragment implements View.OnClickListen
         barberServiceList=(RecyclerView)view.findViewById(R.id.barberService_list);
         barberServiceList.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        FirebaseRecyclerOptions<barberService> options =
-                new FirebaseRecyclerOptions.Builder<barberService>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("barberService"), barberService.class)
-                        .build();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        CollectionReference barber = db.collection("barberService");
+        Query query = barber.orderBy("barberServiceID",Query.Direction.ASCENDING);
+
+        FirestoreRecyclerOptions<barberService> options = new FirestoreRecyclerOptions.Builder<barberService>()
+                .setQuery(query, barberService.class).build();
 
         adapter = new barberServiceAdapter(options);
         barberServiceList.setHasFixedSize(true);
         barberServiceList.setAdapter(adapter);
+
+//        FirebaseRecyclerOptions<barberService> options =
+//                new FirebaseRecyclerOptions.Builder<barberService>()
+//                        .setQuery(FirebaseDatabase.getInstance().getReference().child("barberService"), barberService.class)
+//                        .build();
+//
+//        adapter = new barberServiceAdapter(options);
+//        barberServiceList.setHasFixedSize(true);
+//        barberServiceList.setAdapter(adapter);
 
         return view;
     }
@@ -101,7 +111,6 @@ public class MangeServiceFragment extends Fragment implements View.OnClickListen
     @Override
     public void onStart() {
         super.onStart();
-
             adapter.startListening();
             Log.d("TAG", "Cached document data: ");
             }
@@ -109,9 +118,8 @@ public class MangeServiceFragment extends Fragment implements View.OnClickListen
     @Override
     public void onStop() {
         super.onStop();
-
             adapter.stopListening();
-        Log.d("TAG", "Error");
+            Log.d("TAG", "Error");
 
 
     }

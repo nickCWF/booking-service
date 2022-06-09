@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".customer.customerBookingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+<RelativeLayout
+    android:id="@+id/header_booking"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageButton
+        android:id="@+id/imgButtonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        />
+
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Select Barber Services"
+        android:textSize="24dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/customerBarberService_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="book" />
+        android:layout_below="@+id/imgButtonNext"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp" />
+
+</RelativeLayout>
 
 </FrameLayout>

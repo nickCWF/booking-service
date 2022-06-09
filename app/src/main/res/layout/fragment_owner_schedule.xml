@@ -3,12 +3,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".owner.OwnerScheduleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/calendarText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".booking_calendar">
+
+        <devs.mulham.horizontalcalendar.HorizontalCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:selectorColor="@android:color/holo_red_dark"
+            app:textColorNormal="@color/purple_200"
+            app:textColorSelected="@color/purple_200" />
+
+        <TableLayout
+            android:id="@+id/tableCalender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendarView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:outlineSpotShadowColor="@color/black"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+<!--                <TextView-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="fill_parent"-->
+<!--                    android:layout_column="1"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Time"-->
+<!--                    android:layout_marginLeft="5dp"/>-->
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginEnd="1dp"
+                    android:layout_weight="1"
+                    android:text="Barber Name"
+                    />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginEnd="1dp"
+                    android:layout_weight="1"
+                    android:text="Customer Name" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="1dp"
+                    android:text="Services" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+
+                    android:singleLine="false"
+                    android:text="Time"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/owner_schedule_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tableCalender" />
+
+        <TextView
+            android:id="@+id/textViewTodayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="101dp"
+            android:layout_marginBottom="87dp"
+            android:text="TextView"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+    </RelativeLayout>
 
 </FrameLayout>

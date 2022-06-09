@@ -7,9 +7,10 @@
     tools:context=".barber.barber">
 
     <FrameLayout
+        android:id="@+id/barber_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/barber_container"/>
+        android:layout_marginBottom="80dp"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/barberbottomNav"

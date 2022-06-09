@@ -2,17 +2,31 @@ package com.example.prototype2;
 
 public class barberData {
 
-    String barberID, barberEmail, barberSalary, barberName;
+    String barberID;
+    String barberEmail;
+    String barberSalary;
+
+    static String barberName;
+    String barberUID;
 
     public barberData(){
 
     }
 
-    public barberData(String barberID, String barberEmail, String barberSalary, String barberName) {
+    public barberData(String barberID, String barberEmail, String barberSalary, String barberName, String barberUID) {
         this.barberID = barberID;
         this.barberEmail = barberEmail;
         this.barberSalary = barberSalary;
         this.barberName = barberName;
+        this.barberUID = barberUID;
+    }
+
+    public String getBarberUID() {
+        return barberUID;
+    }
+
+    public void setBarberUID(String barberUID) {
+        this.barberUID = barberUID;
     }
 
     public String getBarberID() {
@@ -39,7 +53,7 @@ public class barberData {
         this.barberSalary = barberSalary;
     }
 
-    public String getBarberName() {
+    public static String getBarberName() {
         return barberName;
     }
 

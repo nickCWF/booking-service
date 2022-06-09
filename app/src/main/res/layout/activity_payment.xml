@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customer.paymentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+      >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Card Type" />
+
+        <Spinner
+            android:id="@+id/cardType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp" />
+
+
+        <LinearLayout
+            android:id="@+id/tableAlign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardType"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Card Number"
+                />
+
+            <EditText
+                android:id="@+id/editTextCardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="16"
+                android:textSize="10dp"
+                android:layout_column="1"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardType"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/tableAlign"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valid Until" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                    <EditText
+                        android:id="@+id/editTextMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="2"
+                        android:inputType="number"
+                        android:textSize="10dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:text="/"/>
+                    <EditText
+                        android:id="@+id/editTextYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="2"
+                        android:inputType="number"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableAlign"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="CSV" />
+
+        <EditText
+            android:id="@+id/editTextCSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView12"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:ems="3"
+            android:inputType="numberPassword" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextCSV"
+            android:text="Valid Until"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextCSV"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:text="Pay" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

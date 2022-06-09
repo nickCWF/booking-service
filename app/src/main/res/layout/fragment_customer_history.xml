@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customer.historyFragment">
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+      <TextView
+          android:id="@+id/historyTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:text="History List"
+          android:textSize="24dp" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/customerBookingHistory_list"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/historyTitle"
+          android:layout_marginStart="1dp"
+          android:layout_marginTop="1dp"
+          android:layout_marginEnd="1dp" />
+  </RelativeLayout>
+
+</FrameLayout>

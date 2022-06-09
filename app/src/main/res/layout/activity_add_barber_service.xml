@@ -7,38 +7,17 @@
     tools:context=".owner.addBarberService">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:text="Barber Service ID"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextBarberServiceID"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Barber Service ID"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:text="Barber Service Name"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBarberServiceID" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Barber Service Name"
+        />
 
     <EditText
         android:id="@+id/editTextBarberServiceName"
@@ -47,7 +26,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:hint="Barber Service Name"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,11 +49,35 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:hint="Price"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Estimate Duration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBarberServicePrice" />
+
+    <EditText
+        android:id="@+id/editTextBarberServiceDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Duration"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        />
 
     <TextView
         android:id="@+id/textView4"
@@ -84,7 +87,7 @@
         android:layout_marginTop="20dp"
         android:text="Commission"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBarberServicePrice" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBarberServiceDuration" />
 
     <EditText
         android:id="@+id/editTextBarberServiceCommission"
@@ -93,7 +96,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:hint="Commission"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"

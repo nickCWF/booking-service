@@ -50,6 +50,10 @@ public class customer extends AppCompatActivity implements BottomNavigationView.
             case R.id.profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.customer_container,customerProfileFragment).commit();
                 return true;
+
+            default:
+                getSupportFragmentManager().beginTransaction().replace(R.id.customer_container,customerBookingFragment).commit();
+
         }
         return false;
     }

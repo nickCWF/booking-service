@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#80d0d0d0"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textlines"
+        >
+
+        <TableLayout
+            android:id="@+id/tableDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:outlineSpotShadowColor="@color/black"
+            >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            >
+
+<!--            <TextView-->
+<!--                android:id="@+id/textViewRangeTime"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_column="1"-->
+<!--                android:text="Time"-->
+<!--                android:maxWidth="40dp"/>-->
+
+            <TextView
+                android:id="@+id/textViewWorkCustomerName"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginEnd="10dp"
+                android:text="Customer Name"
+                android:maxWidth="120dp"/>
+
+            <TextView
+                android:id="@+id/textViewWorkService"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginEnd="10dp"
+                android:text="Customer Services"
+                android:maxWidth="120dp"/>
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_column="3">
+               <TextView
+                   android:id="@+id/textViewTime"
+                   android:layout_width="100dp"
+                   android:layout_height="wrap_content"
+                   android:text="Time Require"
+                   android:maxWidth="100dp"/>
+               <Button
+                   android:id="@+id/textViewWorkStatus"
+                   android:layout_width="100dp"
+                   android:layout_height="wrap_content"
+                   android:text="Status"
+                   android:maxWidth="120dp"
+                   android:textAllCaps="false"/>
+           </LinearLayout>
+
+
+
+        </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/textViewbarberID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="Time Require"
+            android:visibility="invisible"
+           />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

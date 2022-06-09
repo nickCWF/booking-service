@@ -138,7 +138,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                 Map<String, Object> userInfo = new HashMap<>();
                 userInfo.put("Username", username);
                 userInfo.put("Email",email);
-                userInfo.put("Contact Number", contactNumber);
+                userInfo.put("ContactNumber", contactNumber);
+
 
                 //access level
                 userInfo.put("isClient","1");

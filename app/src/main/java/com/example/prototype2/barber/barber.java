@@ -1,24 +1,13 @@
 package com.example.prototype2.barber;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.WindowManager;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.prototype2.R;
-import com.example.prototype2.customer.customerBookingFragment;
-import com.example.prototype2.customer.customerProfileFragment;
-import com.example.prototype2.customer.historyFragment;
-import com.example.prototype2.owner.barberService;
-import com.example.prototype2.owner.barberServiceAdapter;
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 
 public class barber extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 

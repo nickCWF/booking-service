@@ -5,83 +5,169 @@
     android:layout_height="match_parent"
     tools:context=".owner.editBarberService">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+      <TextView
+          android:id="@+id/barberServiceIDHolder"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="ID"
+          android:textSize="25sp"
+          android:textColor="#000"
+          android:visibility="gone"/>
 
-            android:text="Barber Service ID:"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="#000"/>
+      <TextView
+          android:id="@+id/textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="20dp"
+          android:text="Barber Service Name:"
+          android:textColor="#000"
+          android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/barberServiceIDHolder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ID"
-            android:textSize="25sp"
-            android:textColor="#000"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-
-            android:text="Barber Service Name"
-            android:textSize="25sp"
-            android:textColor="#000"/>
-
+    <TableRow
+        android:id="@+id/tableServiceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp">
         <TextView
             android:id="@+id/barberServiceNameHolder"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="Name"
+            android:textColor="#000"
             android:textSize="25sp"
-            android:textColor="#000"/>
+            android:maxWidth="300dp"/>
 
-        <TextView
+        <ImageButton
+            android:id="@+id/btnImgbarberServiceName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            android:src="@drawable/ic_baseline_edit_30" />
+    </TableRow>
+
+      <TextView
+          android:id="@+id/textView2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tableServiceName"
+          android:layout_alignParentStart="true"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="10dp"
+          android:text="Barber Service Price:"
+          android:textColor="#000"
+          android:textSize="25sp" />
+
+     <TableRow
+         android:id="@+id/tableServicePrice"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/textView2"
+         android:layout_alignParentStart="true"
+         android:layout_marginTop="5dp"
+         android:layout_marginStart="15dp">
+         <TextView
+             android:id="@+id/barberServicePriceHolder"
+             android:layout_width="300dp"
+             android:layout_height="wrap_content"
+             android:text="Price"
+             android:textColor="#000"
+             android:textSize="25sp"
+             android:maxWidth="300dp"/>
+         <ImageButton
+             android:id="@+id/btnImgbarberServicePrice"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/grey"
+             android:src="@drawable/ic_baseline_edit_30" />
+
+     </TableRow>
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tableServicePrice"
+          android:layout_alignParentStart="true"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="10dp"
+          android:text="Barber Service Commission:"
+          android:textColor="#000"
+          android:textSize="25sp" />
+
+        <TableRow
+            android:id="@+id/tableServiceCommission"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/textView3"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp">
+            <TextView
+                android:id="@+id/barberServiceCommissionHolder"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Commission"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:maxWidth="300dp"/>
+            <ImageButton
+                android:id="@+id/btnImgbarberServiceCommission"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:src="@drawable/ic_baseline_edit_30" />
 
-            android:text="Barber Service Price"
-            android:textSize="25sp"
-            android:textColor="#000"/>
+        </TableRow>
 
-        <TextView
-            android:id="@+id/barberServicePriceHolder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:textSize="25sp"
-            android:textColor="#000"/>
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tableServiceCommission"
+          android:layout_alignParentStart="true"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="10dp"
+          android:text="Barber Service Duration:"
+          android:textColor="#000"
+          android:textSize="25sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+      <TableRow
+          android:id="@+id/tableServiceDuration"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/textView4"
+          android:layout_alignParentStart="true"
+          android:layout_marginTop="5dp"
+          android:layout_marginStart="15dp">
+          <TextView
+              android:id="@+id/barberServiceDurationHolder"
+              android:layout_width="300dp"
+              android:layout_height="wrap_content"
+              android:text="Duration"
+              android:textColor="#000"
+              android:textSize="25sp"
+              android:maxWidth="300dp"/>
+          <ImageButton
+              android:id="@+id/btnImgbarberServiceDuration"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/grey"
+              android:src="@drawable/ic_baseline_edit_30" />
 
-            android:text="Barber Service Commission"
-            android:textSize="25sp"
-            android:textColor="#000"/>
+      </TableRow>
 
-        <TextView
-            android:id="@+id/barberServiceCommissionHolder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Commission"
-            android:textSize="25sp"
-            android:textColor="#000"/>
 
-    </LinearLayout>
+
+  </RelativeLayout>
 
 </FrameLayout>

@@ -3,6 +3,8 @@ package com.example.prototype2.owner;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,7 +30,7 @@ import java.util.Map;
 
 public class addBarberService extends AppCompatActivity implements View.OnClickListener {
 
-    EditText editTextBarberServiceID, editTextBarberServiceName, editTextBarberServicePrice, editTextBarberServiceCommission;
+    EditText editTextBarberServiceName, editTextBarberServicePrice, editTextBarberServiceCommission, editTextBarberServiceDuration;
     Button btnAddBarberService;
 
     FirebaseFirestore fStore;
@@ -40,10 +42,10 @@ public class addBarberService extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_add_barber_service);
 
 
-        editTextBarberServiceID = (EditText) findViewById(R.id.editTextBarberServiceID);
         editTextBarberServiceName = (EditText) findViewById(R.id.editTextBarberServiceName);
         editTextBarberServicePrice = (EditText) findViewById(R.id.editTextBarberServicePrice);
         editTextBarberServiceCommission = (EditText) findViewById(R.id.editTextBarberServiceCommission);
+        editTextBarberServiceDuration = (EditText) findViewById(R.id.editTextBarberServiceDuration);
 
         btnAddBarberService = (Button) findViewById(R.id.btnAddBarberService);
         btnAddBarberService.setOnClickListener(this);
@@ -61,16 +63,12 @@ public class addBarberService extends AppCompatActivity implements View.OnClickL
         }
     }
     public void addBarberService(){
-        String barberServiceID = editTextBarberServiceID.getText().toString().trim();
+
         String barberServiceName = editTextBarberServiceName.getText().toString().trim();
         String barberServicePrice = editTextBarberServicePrice.getText().toString().trim();
         String barberServiceCommission = editTextBarberServiceCommission.getText().toString().trim();
+        Double barberServiceDuration = Double.parseDouble(editTextBarberServiceDuration.getText().toString());
 
-        if(barberServiceID.isEmpty()){
-            editTextBarberServiceID.setError("ID is required!");
-            editTextBarberServiceID.requestFocus();
-            return;
-        }
         if(barberServiceName.isEmpty()){
             editTextBarberServiceName.setError("Name is required!");
             editTextBarberServiceName.requestFocus();
@@ -86,8 +84,13 @@ public class addBarberService extends AppCompatActivity implements View.OnClickL
             editTextBarberServiceCommission.requestFocus();
             return;
         }
+        if(barberServiceDuration.toString().isEmpty()){
+            editTextBarberServiceDuration.setError("Duration is required!");
+            editTextBarberServiceDuration.requestFocus();
+            return;
+        }
 
-        DocumentReference df = fStore.collection("barberService").document(barberServiceID);
+        DocumentReference df = fStore.collection("barberService").document();
         df.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -96,8 +99,8 @@ public class addBarberService extends AppCompatActivity implements View.OnClickL
                     if(document.exists()){
                         Toast.makeText(addBarberService.this, "The ID is not valid", Toast.LENGTH_SHORT).show();
                     }else {
-                        addDataBarberService(df,barberServiceID,barberServiceName,barberServicePrice,barberServiceCommission);
-                        addListDataBarberService(barberServiceID, barberServiceName);
+                        addDataBarberService(df,barberServiceName,barberServicePrice,barberServiceCommission, barberServiceDuration);
+//                        addListDataBarberService(barberServiceID, barberServiceName,barberServicePrice);
                     }
                 }else {
                     Log.d("TAG", "get failed with ", task.getException());
@@ -107,12 +110,15 @@ public class addBarberService extends AppCompatActivity implements View.OnClickL
 
     }
 
-    public void addDataBarberService(DocumentReference df, String barberServiceID, String barberServiceName, String barberServicePrice, String barberServiceCommission){
+    public void addDataBarberService(DocumentReference df, String barberServiceName, String barberServicePrice, String barberServiceCommission, Double barberServiceDuration){
+        String id = df.getId();
         Map<String, Object> barberServiceInfo = new HashMap<>();
-        barberServiceInfo.put("barberServiceID", barberServiceID);
+        barberServiceInfo.put("barberServiceID", id);
         barberServiceInfo.put("barberServiceName", barberServiceName);
         barberServiceInfo.put("barberServicePrice", barberServicePrice);
         barberServiceInfo.put("barberServiceCommission", barberServiceCommission);
+        barberServiceInfo.put("barberServiceDuration", barberServiceDuration);
+
 
         df.set(barberServiceInfo).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -127,14 +133,16 @@ public class addBarberService extends AppCompatActivity implements View.OnClickL
         });
         MangeServiceFragment fragment = new MangeServiceFragment();
 
+
         startActivity(new Intent(getApplicationContext(),owner.class));
     }
 
-    public void addListDataBarberService(String barberServiceID, String barberServiceName){
-        Map<String, Object> barberService = new HashMap<>();
-        barberService.put("barberServiceID", barberServiceID);
-        barberService.put("barberServiceName", barberServiceName);
-
-        FirebaseDatabase.getInstance().getReference("barberService").child(barberServiceID).setValue(barberService);
-    }
+//    public void addListDataBarberService( String barberServiceName, String barberServicePrice){
+//        Map<String, Object> barberService = new HashMap<>();
+//        barberService.put("barberServiceID", barberServiceID);
+//        barberService.put("barberServiceName", barberServiceName);
+//        barberService.put("barberServicePrice",barberServicePrice);
+//
+//        FirebaseDatabase.getInstance().getReference("barberService").child().setValue(barberService);
+//    }
 }

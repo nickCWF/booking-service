@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
@@ -16,8 +17,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.prototype2.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -90,11 +94,19 @@ public class editBarber extends Fragment implements View.OnClickListener {
         db.addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                barberIDTextView.setText(value.getString("barberID"));
-                barberNameTextView.setText(value.getString("barberName"));
-                barberSalaryTextView.setText(value.getString("barberSalary"));
-                barberContactTextView .setText(value.getString("barberContactNumber"));
-                barberEmailTextView.setText(value.getString("barberEmail"));
+                if (error != null) {
+                    Toast.makeText(getContext(), "Something error, Try again later!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (value.exists()){
+                    barberIDTextView.setText(value.getString("barberID"));
+                    barberNameTextView.setText(value.getString("barberName"));
+                    barberSalaryTextView.setText(value.getString("barberSalary"));
+                    barberContactTextView .setText(value.getString("barberContactNumber"));
+                    barberEmailTextView.setText(value.getString("barberEmail"));
+                }else {
+                    Toast.makeText(getContext(), "No such Data!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -112,6 +124,7 @@ public class editBarber extends Fragment implements View.OnClickListener {
                 layout.setOrientation(LinearLayout.VERTICAL);
                 layout.setPadding(10, 10, 10, 10);
                 EditText editText = new EditText(getContext());
+
                 editText.setHint("Enter Salary");
                 editText.setInputType(InputType.TYPE_CLASS_NUMBER);
                 layout.addView(editText);
@@ -120,6 +133,19 @@ public class editBarber extends Fragment implements View.OnClickListener {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         editTextUpdateSalary = editText.getText().toString();
+                        DocumentReference salaryRef = fStore.collection("barber").document(barberID);
+                        salaryRef.update("barberSalary", editTextUpdateSalary).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(getContext(), "Success Update Salary", Toast.LENGTH_SHORT).show();
+                                }
+                                else {
+                                    Toast.makeText(getContext(), "Something Error try again later", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
                         dialogInterface.cancel();
                     }
                 });

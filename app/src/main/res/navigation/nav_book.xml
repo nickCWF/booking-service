@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_book"
+    app:startDestination="@id/customerBookingFragment">
+
+    <fragment
+        android:id="@+id/customerBookingFragment"
+        android:name="com.example.prototype2.customer.customerBookingFragment"
+        android:label="fragment_customer_booking"
+        tools:layout="@layout/fragment_customer_booking" >
+        <action
+            android:id="@+id/action_customerBookingFragment_to_bookingCalanderFragment"
+            app:destination="@id/bookingCalanderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingCalanderFragment"
+        android:name="com.example.prototype2.customer.bookingCalanderFragment"
+        android:label="fragment_booking_calander"
+        tools:layout="@layout/fragment_booking_calander" />
+</navigation>

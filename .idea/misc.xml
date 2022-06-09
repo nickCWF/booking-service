@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/cancel_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/comment_box.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/finish_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.140625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/ic_baseline_add_a_photo_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/ic_baseline_arrow_back_ios_new_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/ic_baseline_edit_30.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/ic_launcher_background.xml" value="0.159375" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/ongoing.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/ongoing_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/pending_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/rounded_corner_view.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/textlines.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/drawable/waiting_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_add_barber.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_add_barber_service.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_barber.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_barber_apply_leave.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_barber_history_details.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_booking_calendar.xml" value="0.25407608695652173" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_customer.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_list_apply_leave.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_login.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_main.xml" value="0.25407608695652173" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_owner.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_payment.xml" value="0.176" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_rating_service.xml" value="0.25317028985507245" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/activity_register.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/barberlist.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/customer_cancelbooking_dialog.xml" value="0.2391304347826087" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/dialog_update_name.xml" value="0.2391304347826087" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/dialog_update_password.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/dialog_update_salary.xml" value="0.152" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_barber_profile.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_barber_scan.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_barber_schedule.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_barber_service_detail.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_booking_barber.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_booking_calander.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_customer_barber_details.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_customer_booking.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_customer_booking_details.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_customer_history.xml" value="0.2391304347826087" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_customer_history_details.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_customer_profile.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_customor_barber.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_edit_barber.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_edit_barber_service.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_edit_leave.xml" value="0.176" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_history.xml" value="0.25317028985507245" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_manage_barber.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_mange_service.xml" value="0.176" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_owner_edit_schedule.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_owner_manage_leave.xml" value="0.1203125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_owner_schedule.xml" value="0.136" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/fragment_report.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_barber_apply_leave.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_barber_leave.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_barber_leave_single.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_barber_single.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_barber_work_details.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_barberservice_single.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_customer_barber.xml" value="0.176" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_customer_barberservie.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_customer_history.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_customer_rating.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_owner_apply_list.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/list_owner_schedule.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/owner_main_bar.xml" value="0.2391304347826087" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/layout/owner_main_contain.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/menu/owner_drawer.xml" value="0.1203125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype2.3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/drawable/dialog_update_salary.xml" value="0.14583333333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/drawable/ic_next.xml" value="0.1140625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/drawable/ic_previous.xml" value="0.2890625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/drawable/next.xml" value="0.2890625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/activity_add_barber.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/activity_add_barber_service.xml" value="0.1641337386018237" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/activity_barber.xml" value="0.15260416666666668" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/activity_booking_calendar.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/activity_customer.xml" value="0.152" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/activity_login.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/activity_owner.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/activity_register.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/barberlist.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/dialog_update_salary.xml" value="0.1296875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_baber_details.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_barber_detail.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_barber_list.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_barber_profile.xml" value="0.12" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_barber_scan.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_barber_schedule.xml" value="0.1296875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_barber_service_detail.xml" value="0.1140625" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_booking_calander.xml" value="0.1296875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_customer_booking.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_customer_profile.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_customor_barber.xml" value="0.152" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_decsfragment.xml" value="0.15260416666666668" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_edit_barber.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_edit_barber_service.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_history.xml" value="0.1296875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_manage_barber.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_mange_service.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_owner_schedule.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_recfragment.xml" value="0.15260416666666668" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/fragment_report.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/list_barber_single.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/list_barberservice_single.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/owner_main_bar.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/owner_main_contain.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/row_calendar_date.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/layout/singlerowdesign.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/menu/barber_menu.xml" value="0.1296875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/menu/customer_menu.xml" value="0.1296875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/prototype22/app/src/main/res/menu/owner_drawer.xml" value="0.13020833333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

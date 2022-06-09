@@ -31,10 +31,11 @@ import java.util.Map;
 public class addBarber extends AppCompatActivity implements View.OnClickListener {
 
     private TextView registerBarber;
-    private EditText editTextBarberName, editTextBarberEmail, editTextBarberPassword, editTextBarberContactNumber, editTextSalary, editTextBarberID;
+    private EditText editTextBarberName, editTextBarberEmail, editTextBarberPassword, editTextBarberContactNumber, editTextSalary;
     private ProgressBar progressBar;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    public String barberUID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,6 @@ public class addBarber extends AppCompatActivity implements View.OnClickListener
         editTextBarberPassword = (EditText) findViewById(R.id.editTextBarberPassword);
         editTextSalary = (EditText) findViewById(R.id.editTextBarberSalary);
         editTextBarberEmail = (EditText) findViewById(R.id.editTextBarberEmail);
-        editTextBarberID = (EditText) findViewById(R.id.editTextBarberID);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
@@ -74,7 +74,6 @@ public class addBarber extends AppCompatActivity implements View.OnClickListener
             String barberContactNumber = editTextBarberContactNumber.getText().toString().trim();
             String barberPassword = editTextBarberPassword.getText().toString().trim();
             String barberSalary = editTextSalary.getText().toString().trim();
-            String barberID = editTextBarberID.getText().toString().trim();
 
             if (barbername.isEmpty()) {
                 editTextBarberName.setError("Name is required!");
@@ -116,35 +115,37 @@ public class addBarber extends AppCompatActivity implements View.OnClickListener
                 editTextBarberPassword.requestFocus();
                 return;
             }
-            if (barberID.isEmpty()) {
-                editTextBarberID.setError("ID is require!");
-                editTextBarberID.requestFocus();
-                return;
-            }
+
 
             progressBar.setVisibility(View.VISIBLE);
             fAuth.createUserWithEmailAndPassword(barberemail, barberPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task)  {
-
-
-                    saveUser(barbername, barberemail, barberContactNumber, barberSalary, barberID);
-                    saveDocument(barbername, barberemail, barberContactNumber, barberSalary, barberID);
-                    saveRealDocument(barbername, barberemail,  barberID);
-                    progressBar.setVisibility(View.GONE);
-                    startActivity(new Intent(getApplicationContext(), owner.class));
+                    if(task.isSuccessful()){
+                        saveUser(barbername, barberemail, barberContactNumber, barberSalary);
+                        saveDocument(barbername, barberemail, barberContactNumber, barberSalary);
+//                    saveRealDocument(barbername, barberemail,  barberID);
+                        progressBar.setVisibility(View.GONE);
+                        startActivity(new Intent(getApplicationContext(), owner.class));
+                    }
+                    else {
+                        Toast.makeText(addBarber.this, "User already registered user other email", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
+                    }
                 }
             });
 
         }
 
-        public void saveUser(String barbername, String barberemail, String barberContactNumber, String barberSalary, String ID){
+        public void saveUser(String barbername, String barberemail, String barberContactNumber, String barberSalary){
             FirebaseUser user = fAuth.getCurrentUser();
             Toast.makeText(addBarber.this, "Account Create", Toast.LENGTH_SHORT).show();
             DocumentReference df = fStore.collection("Users").document(user.getUid());
+            barberUID = user.getUid();
             Map<String, Object> userInfo = new HashMap<>();
             userInfo.put("barberName", barbername);
             userInfo.put("barberEmail", barberemail);
+
 
             //access level
             userInfo.put("isBarber", "1");
@@ -171,12 +172,15 @@ public class addBarber extends AppCompatActivity implements View.OnClickListener
 
         }
 
-    public void saveDocument(String barbername, String barberemail, String barberContactNumber, String barberSalary, String ID){
+    public void saveDocument(String barbername, String barberemail, String barberContactNumber, String barberSalary){
 
         Toast.makeText(addBarber.this, "Account Create", Toast.LENGTH_SHORT).show();
-        DocumentReference df = fStore.collection("barber").document(ID);
+
+        DocumentReference df = fStore.collection("barber").document(barberUID);
+        String id = df.getId();
         Map<String, Object> userInfo = new HashMap<>();
-        userInfo.put("barberID", ID);
+
+        userInfo.put("barberUID", barberUID);
         userInfo.put("barberName", barbername);
         userInfo.put("barberEmail", barberemail);
         userInfo.put("barberContactNumber", barberContactNumber);

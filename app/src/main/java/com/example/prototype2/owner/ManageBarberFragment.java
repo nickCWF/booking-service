@@ -18,6 +18,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
@@ -73,13 +74,26 @@ public class ManageBarberFragment extends Fragment implements View.OnClickListen
         barberview=(RecyclerView)view.findViewById(R.id.barberview);
         barberview.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        FirebaseRecyclerOptions<barberData> options =
-                new FirebaseRecyclerOptions.Builder<barberData>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("barber"), barberData.class)
-                        .build();
+        /**call the database**/
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        CollectionReference barber = db.collection("barber");
+        Query query = barber.orderBy("barberID",Query.Direction.ASCENDING);
+
+        FirestoreRecyclerOptions<barber> options = new FirestoreRecyclerOptions.Builder<barber>()
+                .setQuery(query, barber.class).build();
 
         adapter = new barberAdapter(options);
+        barberview.setHasFixedSize(true);
         barberview.setAdapter(adapter);
+
+//        FirebaseRecyclerOptions<barberData> options =
+//                new FirebaseRecyclerOptions.Builder<barberData>()
+//                        .setQuery(FirebaseDatabase.getInstance().getReference().child("barber"), barberData.class)
+//                        .build();
+//
+//        adapter = new barberAdapter(options);
+//        barberview.setHasFixedSize(true);
+//        barberview.setAdapter(adapter);
         return view;
     }
     @Override

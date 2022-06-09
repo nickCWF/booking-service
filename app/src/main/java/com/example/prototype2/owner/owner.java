@@ -11,7 +11,10 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.prototype2.Login;
 import com.example.prototype2.R;
@@ -25,6 +28,8 @@ public class owner extends AppCompatActivity {
 
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
+    ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,8 @@ public class owner extends AppCompatActivity {
         // Set a Toolbar to replace the ActionBar.
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        progressBar = findViewById(R.id.progressBar);
 
         // This will display an Up icon (<-), we will replace it with hamburger later
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -56,7 +63,7 @@ public class owner extends AppCompatActivity {
 
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 //
-//        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new ManageBarberFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new ManageBarberFragment()).commit();
     }
     private ActionBarDrawerToggle setupDrawerToggle() {
         // NOTE: Make sure you pass in a valid toolbar reference.  ActionBarDrawToggle() does not require it
@@ -105,15 +112,17 @@ public class owner extends AppCompatActivity {
             case R.id.menu_Schedule:
                 fragmentClass = OwnerScheduleFragment.class;
                 break;
+            case R.id.menu_Leave:
+                fragmentClass = ownerManageLeaveFragment.class;
+                break;
+
             case R.id.menu_Report:
                 fragmentClass = ReportFragment.class;
                 break;
             case R.id.menu_Logout:
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getApplicationContext(), Login.class));
+                signOut();
                 break;
-            default:
-                fragmentClass = ManageBarberFragment.class;
+
         }
 
         try {
@@ -132,5 +141,14 @@ public class owner extends AppCompatActivity {
         setTitle(menuItem.getTitle());
         // Close the navigation drawer
         drawerLayout.closeDrawers();
+    }
+
+    private void signOut(){
+        progressBar.setVisibility(View.VISIBLE);
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(getApplicationContext(), Login.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(), "Successfully logged out", Toast.LENGTH_SHORT).show();
+        progressBar.setVisibility(View.GONE);
     }
 }

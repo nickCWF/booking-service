@@ -13,40 +13,46 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.prototype2.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-public class barberServiceAdapter extends FirebaseRecyclerAdapter<barberService,barberServiceAdapter.holder> {
-
-    public barberServiceAdapter(@NonNull FirebaseRecyclerOptions<barberService> options) {
+public class barberServiceAdapter extends FirestoreRecyclerAdapter<barberService, barberServiceAdapter.holder> {
+    /**
+     * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
+     * FirestoreRecyclerOptions} for configuration options.
+     *
+     * @param options
+     */
+    public barberServiceAdapter(@NonNull FirestoreRecyclerOptions<barberService> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull holder holder, int i, @NonNull barberService barberService) {
-        holder.barberService_name.setText(barberService.getBarberServiceName());
-        holder.barberService_ID.setText(barberService.getBarberServiceID());
+    protected void onBindViewHolder(@NonNull barberServiceAdapter.holder holder, int position, @NonNull barberService model) {
+        holder.barberService_name.setText(model.getBarberServiceName());
+        holder.barberService_ID.setText(model.getBarberServiceID());
 
         holder.btnEditBarberService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AppCompatActivity activity=(AppCompatActivity)view.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,new editBarberService(barberService.getBarberServiceID())).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,new editBarberService(model.getBarberServiceID())).addToBackStack(null).commit();
             }
         });
     }
 
     @NonNull
     @Override
-    public holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public barberServiceAdapter.holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_barberservice_single,parent, false);
         return new holder(view);
     }
 
-    public class holder extends RecyclerView.ViewHolder{
-        TextView barberService_name, barberService_price, barberService_ID;
+    public class holder extends RecyclerView.ViewHolder {
+        TextView barberService_name, barberService_ID;
         Button btnEditBarberService, btnDeleteBarberService;
         public holder(@NonNull View itemView) {
             super(itemView);
-
             barberService_name = itemView.findViewById(R.id.barberService_name);
             barberService_ID = itemView.findViewById(R.id.barberService_ID);
             btnEditBarberService = itemView.findViewById(R.id.btnEditBarberService);

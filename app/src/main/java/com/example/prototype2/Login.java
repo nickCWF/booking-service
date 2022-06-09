@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.prototype2.barber.barber;
 import com.example.prototype2.customer.customer;
+import com.example.prototype2.customer.customerData;
 import com.example.prototype2.owner.owner;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -53,6 +55,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+
+
     }
 
     @Override
@@ -95,7 +99,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         progressBar.setVisibility(View.VISIBLE);
 
 
-
         fAuth.signInWithEmailAndPassword(email,password)
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
@@ -123,17 +126,27 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                Log.d("TAG", "onSuccess: " + documentSnapshot.getData() );
 
 
                 if(documentSnapshot.getString("isClient") != null){
+                    Log.d("TAG", "onSuccess: " + documentSnapshot.getData());
+                    String cName = documentSnapshot.getString("Username");
+                    customerData data = new customerData();
+                    data.setUsername(cName);
+                    Log.d("TAG", "onSuccess: " + cName );
                     startActivity(new Intent(getApplicationContext(), customer.class));
+
                 }
                 if(documentSnapshot.getString("isOwner")  != null){
                     startActivity(new Intent(getApplicationContext(), owner.class));
 
                 }
                 if(documentSnapshot.getString("isBarber") != null){
+                    Log.d("TAG", "onSuccess: " + documentSnapshot.getData());
+                    String bName = documentSnapshot.getString("barberName");
+                    customerData data = new customerData();
+                    data.setBarberName(bName);
+                    Log.d("TAG", "onSuccess: " + bName );
                     startActivity(new Intent(getApplicationContext(), barber.class));
                 }
 
